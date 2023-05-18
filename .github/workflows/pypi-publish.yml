@@ -1,0 +1,41 @@
+name: Build and publish package
+
+on:
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ prereleased, released ]
+
+jobs:
+  build_and_publish:
+    name: Build and publish nprr on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build dist
+        run: |
+          pip install --upgrade build
+          python -m build ./
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: nprr_dist
+          path: ./dist/*
+          
+      - name: Publish distribution to Test PyPI (if prereleased)
+        if: github.event_name == 'release' && github.event.action == 'prereleased'
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          
+      - name: Publish distribution to PyPI (if officially released)
+        if: github.event_name == 'release' && github.event.action == 'released'
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}      
