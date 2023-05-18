@@ -4,10 +4,6 @@ This code implements the nonparametric randomized response (NPRR) mechanism as w
 
 ## Installation
 
-*This won't work yet — we're going to put it on PyPi soon.*
-
-To install the package, run the following in a terminal: 
-
 ```sh
 pip install nprr
 ```
