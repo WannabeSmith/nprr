@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 import math
-from dpconc.mechanisms import nprr
-from dpconc.dpcs import (
+from nprr.mechanisms import nprr
+from nprr.dpcs import (
     nprr_twosided_runningmean_cs,
     nprr_onesided_runningmean_cs,
 )
-from dpconc import PrivacyMechanism
-from dpconc.plotting import (
+from nprr import PrivacyMechanism
+from nprr.plotting import (
     plot_cs,
     generate_plotting_data,
     binomial_dgp,

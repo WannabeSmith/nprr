@@ -1,14 +1,14 @@
 from confseq.misc import get_ci_seq
 import matplotlib.pyplot as plt
-from dpconc.mechanisms import nprr, laplace, r_G_opt_entropy
-from dpconc.dpcs import (
+from nprr.mechanisms import nprr, laplace, r_G_opt_entropy
+from nprr.dpcs import (
     laplace_hoeffding_ci,
     nprr_hoeffding_ci,
     nprr_hedged_ci,
     nprr_empbern_ci,
 )
-from dpconc import PrivacyMechanism
-from dpconc.plotting import (
+from nprr import PrivacyMechanism
+from nprr.plotting import (
     plot_cs,
     generate_plotting_data,
     beta_dgp,

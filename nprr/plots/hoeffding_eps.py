@@ -1,14 +1,14 @@
 import matplotlib.pyplot as plt
-from dpconc.dpcs import nprr_hoeffding_ci
-from dpconc.plotting import (
+from nprr.dpcs import nprr_hoeffding_ci
+from nprr.plotting import (
     ConfseqToPlot,
     PrivacyMechanismC2PListPair,
     beta_dgp,
     generate_plotting_data,
     plot_cs,
 )
-from dpconc.mechanisms import nprr
-from dpconc import PrivacyMechanism
+from nprr.mechanisms import nprr
+from nprr import PrivacyMechanism
 import numpy as np
 import math
 from confseq.betting import get_ci_seq

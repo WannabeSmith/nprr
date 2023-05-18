@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
-from dpconc.mechanisms import nprr, laplace, r_G_opt_entropy
-from dpconc.dpcs import (
+from nprr.mechanisms import nprr, laplace, r_G_opt_entropy
+from nprr.dpcs import (
     laplace_hoeffding_cs,
     nprr_empbern_cs,
     nprr_gridKelly_cs,
     nprr_hoeffding_cs,
 )
-from dpconc import PrivacyMechanism
-from dpconc.plotting import (
+from nprr import PrivacyMechanism
+from nprr.plotting import (
     plot_cs,
     generate_plotting_data,
     beta_dgp,

@@ -1,5 +1,5 @@
 """
-Differentially private confidence intervals and sequences via NPRR and the Laplace mechanism
+Differentially private confidence intervals and sequences via NPRR and the Laplace mechanisms
 """
 from functools import reduce
 import warnings
