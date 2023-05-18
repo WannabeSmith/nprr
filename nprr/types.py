@@ -1,5 +1,5 @@
 """
-This module contains utility functions and type aliases.
+This module contains some type aliases.
 """
 from numpy.typing import NDArray
 import numpy as np
