@@ -1,0 +1,43 @@
+# This workflow will check type consistency for Ubuntu & macOS with Python 3.7--3.10.
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Test nprr
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-nprr:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+        
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Install testing dependencies
+      run: |
+        python -m pip install --upgrade pytest pytype
+        
+    - name: Install package
+      run: |
+        pip install ./
+  
+    - name: Check type consistency with pytype
+      run: |
+        # Run pytype on python versions 3.7--3.10.
+        py_minor_version="$(python -c 'import sys; print(sys.version_info.minor)')"
+        pytype nprr
