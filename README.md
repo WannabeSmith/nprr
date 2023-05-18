@@ -28,9 +28,9 @@ Please begin the following steps from the root of the nprr directory.
 1. Create and activate a virtual environment using the method of your choice. We used venv, e.g.
 
 ```sh
-python3.9 -m venv venv_dpconc
+python3.9 -m venv venv_nprr
 
-source venv_dpconc/bin/activate
+source venv_nprr/bin/activate
 ```
 
 2. Install the package and its dependencies.
