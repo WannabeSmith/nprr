@@ -1,3 +1,7 @@
+# Ignore generated figures and data dumps
+nprr/plots/figures
+nprr/plots/data_dump
+
 # Emacs backup files
 *~
 
