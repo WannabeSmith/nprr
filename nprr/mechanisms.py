@@ -9,6 +9,7 @@ from scipy.optimize import minimize, Bounds
 
 from nprr.types import RealArray
 
+
 def laplace(x: NDArray[np.float_], eps: float) -> NDArray[np.float_]:
     """
     Laplace mechanism
@@ -240,6 +241,7 @@ def r_G_opt_entropy(eps: float) -> Tuple[float, int]:
     G_opt, int
         Optimal number of bins to use for stochastic rounding
     """
+
     def objective(r):
         """
         Objective function for optimization
@@ -261,7 +263,8 @@ def r_G_opt_entropy(eps: float) -> Tuple[float, int]:
     G_ceil = np.ceil(G_opt)
     G_opt_discrete = (
         G_floor
-        if objective(r_from_G_eps(G_floor, eps)) < objective(r_from_G_eps(G_ceil, eps))
+        if objective(r_from_G_eps(G_floor, eps))
+        < objective(r_from_G_eps(G_ceil, eps))
         else G_ceil
     )
 
@@ -281,4 +284,3 @@ def r_G_opt_entropy(eps: float) -> Tuple[float, int]:
         )
 
     return float(r_opt_adjusted), int(G_opt_discrete)
-

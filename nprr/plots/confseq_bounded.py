@@ -111,7 +111,7 @@ dgp_dict = {
 save_plotting_data = True
 save_figure = True
 
-for (dgp_name, dgp) in dgp_dict.items():
+for dgp_name, dgp in dgp_dict.items():
     plot_name = dgp_name + "_cs"
     plotting_data = generate_plotting_data(
         dgp=dgp,

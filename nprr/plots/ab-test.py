@@ -95,7 +95,7 @@ dgp_dict = {
 save_plotting_data = True
 save_figure = True
 
-for (dgp_name, dgp) in dgp_dict.items():
+for dgp_name, dgp in dgp_dict.items():
     plot_name = dgp_name + "_cs"
     plotting_data = generate_plotting_data(
         dgp=dgp,
@@ -157,8 +157,13 @@ for (dgp_name, dgp) in dgp_dict.items():
         alpha=0.8,
     )
 
-    plt.text(95, 0.08, r"$\widetilde \mathcal{H}_0$: $\forall t,\ \widetilde \Delta_t \leq 0$", color="royalblue", alpha=0.8)
-
+    plt.text(
+        95,
+        0.08,
+        r"$\widetilde \mathcal{H}_0$: $\forall t,\ \widetilde \Delta_t \leq 0$",
+        color="royalblue",
+        alpha=0.8,
+    )
 
     ### xticks
     # ticks, labels = plt.xticks()
@@ -179,12 +184,10 @@ for (dgp_name, dgp) in dgp_dict.items():
     # ticks,labels=plt.xticks()
     # print(labels)
 
-
-
     plt.legend(loc="lower right")
 
     plt.ylim(bottom=-1.5)
-    plt.xlim(75, 1.2*10**4)
+    plt.xlim(75, 1.2 * 10**4)
 
     if save_figure:
         plt.savefig("figures/" + plot_name + ".pdf", bbox_inches="tight")

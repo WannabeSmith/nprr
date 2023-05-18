@@ -75,7 +75,7 @@ dgp_dict = {
 save_plotting_data = True
 save_figure = True
 
-for (dgp_name, dgp) in dgp_dict.items():
+for dgp_name, dgp in dgp_dict.items():
     plot_name = dgp_name + "_cs"
     plotting_data = generate_plotting_data(
         dgp=dgp,
@@ -97,7 +97,7 @@ for (dgp_name, dgp) in dgp_dict.items():
         xlabel=r"Time $t$",
         ylabel=r"Confidence sequence",
         mean_data=mean_data,
-        plot_alpha = 0.8
+        plot_alpha=0.8,
     )
 
     if save_figure:

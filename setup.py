@@ -9,11 +9,6 @@ setup(
     author_email="iwaudbysmith@gmail.com",
     license="BSD 3-Clause",
     packages=["nprr"],
-    install_requires=[
-        "confseq",
-        "numpy",
-        "scipy",
-        "matplotlib"
-    ],
+    install_requires=["confseq", "numpy", "scipy", "matplotlib"],
     zip_safe=False,
 )

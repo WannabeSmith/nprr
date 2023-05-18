@@ -43,7 +43,9 @@ pair_list = [
                 name=r"$\dot L_n^{H}$",
                 cs_fn=lambda z: get_ci_seq(
                     z,
-                    ci_fn=lambda z: nprr_hoeffding_ci(z, r=r_G1, alpha=alpha, running_intersection=False),
+                    ci_fn=lambda z: nprr_hoeffding_ci(
+                        z, r=r_G1, alpha=alpha, running_intersection=False
+                    ),
                     times=times,
                     parallel=True,
                 ),

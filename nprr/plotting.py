@@ -177,7 +177,6 @@ def plot_cs(
     plt.rcParams["font.size"] = 13
     fig, ax_cs = plt.subplots(1, 1, figsize=figsize)
 
-
     if mean_data is not None:
         ax_cs.plot(
             times,
