@@ -1,6 +1,6 @@
 # NPRR: Nonparametric randomized response
 
-This code implements the nonparametric randomized response (NPRR) mechanism as well as methods for computing locally differentially private confidence intervals and sequences from NPRR's output. The methods are based on the paper "A nonparametric extension of randomized response for private confidence sets" by I. Waudby-Smith, Z.S. Wu, and A. Ramdas (2023).
+This code implements the nonparametric randomized response (NPRR) mechanism as well as methods for computing locally differentially private confidence intervals and sequences from NPRR's output. The methods are based on the paper ["A nonparametric extension of randomized response for private confidence sets"](https://arxiv.org/abs/2202.08728) by Ian Waudby-Smith, Zhiwei Steven Wu, and Aaditya Ramdas (2023).
 
 ## Installation
 
