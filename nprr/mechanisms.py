@@ -7,7 +7,7 @@ import warnings
 import numpy as np
 from scipy.optimize import minimize, Bounds
 
-from nprr.utils import RealArray
+from nprr.types import RealArray
 
 def laplace(x: NDArray[np.float_], eps: float) -> NDArray[np.float_]:
     """

@@ -19,7 +19,7 @@ from confseq.betting import (
 
 from confseq.conjmix_bounded import rho2_opt
 
-from nprr.utils import RealArray, IntArray
+from nprr.types import RealArray, IntArray
 
 
 class PrivacyMechanism(NamedTuple):
